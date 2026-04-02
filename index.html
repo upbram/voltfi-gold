@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>VoltFi — Gold Yield on Stacks</title>
+  <meta name="description" content="The first gold-backed yield vault on Bitcoin. Deposit USDCx, earn gold carry yield, powered by Stacks.">
+
+  <!-- Favicon & PWA icon -->
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" href="./voltfi-logo-192.png">
+
+  <!-- Fonts: General Sans (Fontshare), Inter + JetBrains Mono (Google) -->
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- ====================================================================
+       NAVIGATION
+       ==================================================================== -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <!-- Brand -->
+      <div class="nav__brand">
+        <img src="./assets/voltfi-logo.jpg" alt="VoltFi" class="nav__logo">
+        <span class="nav__name">VoltFi</span>
+        <span class="badge badge--secondary">Gold Vault</span>
+      </div>
+
+      <!-- Desktop nav links -->
+      <div class="nav__links">
+        <a href="#how-it-works" class="nav__link">How It Works</a>
+        <a href="#features" class="nav__link">Features</a>
+
+      </div>
+
+      <!-- Desktop Launch button -->
+      <div class="nav__links">
+        <a href="#" class="btn-primary btn-primary--sm">
+          Launch App
+          <!-- Arrow right icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button class="nav__hamburger" id="hamburger-btn" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu overlay -->
+    <div class="nav__mobile-menu" id="mobile-menu">
+      <div class="nav__mobile-header">
+        <div class="nav__brand">
+          <img src="./assets/voltfi-logo.jpg" alt="VoltFi" class="nav__logo">
+          <span class="nav__name">VoltFi</span>
+        </div>
+        <button class="nav__hamburger" id="close-menu-btn" aria-label="Close menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="nav__mobile-links">
+        <a href="#how-it-works" class="nav__mobile-link" data-close-menu>How It Works</a>
+        <a href="#features" class="nav__mobile-link" data-close-menu>Features</a>
+
+      </div>
+      <div class="nav__mobile-cta">
+        <a href="#" class="btn-primary" style="width:100%">
+          Launch App
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ====================================================================
+       HERO SECTION
+       ==================================================================== -->
+  <section class="hero">
+    <!-- Subtle orange radial glow -->
+    <div class="hero__glow"></div>
+
+    <div class="container hero__inner">
+      <div class="hero__grid">
+        <!-- Left content -->
+        <div class="hero__content">
+          <div class="hero__badges">
+            <span class="badge badge--gold">Stacks Mainnet</span>
+            <span class="badge badge--muted">Powered by Bitcoin</span>
+          </div>
+
+          <h1 class="hero__title">
+            Gold-Backed Yield<br>
+            <span>on Bitcoin L2</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            Deposit USDCx into the VoltFi vault. We buy spot PAXG, execute a carry strategy, and return yield as stSTX. First commodity yield product on any Bitcoin layer.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#" class="btn-primary">
+              Launch App
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <button class="btn-outline" id="learn-more-btn">
+              Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Vault overview card -->
+        <div class="vault-card">
+          <div class="vault-card__header">
+            <span class="vault-card__label">Vault Overview</span>
+            <div class="vault-card__pulse"></div>
+          </div>
+
+          <div>
+            <p class="vault-card__price-label">Gold Price (PAXG/USD) <span id="price-live-dot">live</span></p>
+            <p class="vault-card__price">$<span id="gold-price">—</span></p>
+            <p class="vault-card__change" id="gold-change">loading...</p>
+          </div>
+
+          <div class="vault-card__grid">
+            <div>
+              <p class="vault-card__stat-label">Est. APY</p>
+              <p class="vault-card__stat-value vault-card__stat-value--gold">8%</p>
+            </div>
+            <div>
+              <p class="vault-card__stat-label">Receipt Token</p>
+              <p class="vault-card__stat-value">vGLD</p>
+            </div>
+          </div>
+
+          <div class="vault-card__grid">
+            <div>
+              <p class="vault-card__stat-label">Yield Paid In</p>
+              <p class="vault-card__stat-value--sm">stSTX / STX</p>
+            </div>
+            <div>
+              <p class="vault-card__stat-label">Chain</p>
+              <p class="vault-card__stat-value--sm">Stacks</p>
+            </div>
+          </div>
+
+          <div class="vault-card__callout">
+            <p>PAXG hit ATH of $5,622 in Jan 2026. Gold up 75%+ since Jan 2025.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================================
+       STATS BAR
+       ==================================================================== -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div>
+          <p class="stats__value">$545M</p>
+          <p class="stats__label">Stacks sBTC TVL</p>
+        </div>
+        <div>
+          <p class="stats__value">+75%</p>
+          <p class="stats__label">Gold Since Jan 2025</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================================
+       HOW IT WORKS
+       ==================================================================== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">How It Works</p>
+        <h2 class="section-title">From USDCx deposit to gold yield in three steps</h2>
+      </div>
+
+      <div class="steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-card__header">
+            <div class="step-card__icon">
+              <!-- Coins icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
+            </div>
+            <span class="step-card__number">01</span>
+          </div>
+          <h3 class="step-card__title">Deposit USDCx</h3>
+          <p class="step-card__desc">Connect your Xverse wallet and deposit USDCx into the Clarity vault on Stacks mainnet. You receive vGLD receipt tokens representing your share.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-card__header">
+            <div class="step-card__icon">
+              <!-- Chart column icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+            </div>
+            <span class="step-card__number">02</span>
+          </div>
+          <h3 class="step-card__title">Gold Carry Strategy</h3>
+          <p class="step-card__desc">Your USDCx buys spot PAXG on Coinbase. The vault executes a carry strategy to capture gold contango yield. Proof-of-reserve is published on-chain.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-card__header">
+            <div class="step-card__icon">
+              <!-- Trending up icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </div>
+            <span class="step-card__number">03</span>
+          </div>
+          <h3 class="step-card__title">Earn stSTX Yield</h3>
+          <p class="step-card__desc">Yield is converted to stSTX or STX and distributed to vGLD holders weekly. Redeem anytime by burning your vGLD tokens.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================================
+       WHY VOLTFI GOLD (Features Grid)
+       ==================================================================== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Why VoltFi Gold</p>
+        <h2 class="section-title">Built for the Stacks ecosystem</h2>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1: Proof-of-Reserve -->
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <!-- Shield icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+          </div>
+          <h3 class="feature-card__title">Proof-of-Reserve</h3>
+          <p class="feature-card__desc">PAXG holdings verified on-chain via Clarity contract. Full transparency on every deposit.</p>
+        </div>
+
+        <!-- Feature 2: Non-Custodial Vault -->
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <!-- Lock icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3 class="feature-card__title">Non-Custodial Vault</h3>
+          <p class="feature-card__desc">Clarity smart contract holds your vGLD tokens. You control redemption. No intermediaries.</p>
+        </div>
+
+        <!-- Feature 3: Bitcoin-Native -->
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <!-- Zap icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+          </div>
+          <h3 class="feature-card__title">Bitcoin-Native</h3>
+          <p class="feature-card__desc">Built on Stacks, secured by Bitcoin. Yield from real-world gold markets, settled on BTC L2.</p>
+        </div>
+
+        <!-- Feature 4: USDCx Deposits -->
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <!-- Coins icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
+          </div>
+          <h3 class="feature-card__title">USDCx Deposits</h3>
+          <p class="feature-card__desc">Uses Circle's xReserve USDCx on Stacks. Familiar stablecoin, no bridging friction.</p>
+        </div>
+
+        <!-- Feature 5: Gold Carry Yield -->
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <!-- Trending up icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <h3 class="feature-card__title">Gold Carry Yield</h3>
+          <p class="feature-card__desc">Captures contango from gold futures curve. Strategy produces yield even in flat markets.</p>
+        </div>
+
+        <!-- Feature 6: Institutional Grade -->
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <!-- Users icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="feature-card__title">Institutional Grade</h3>
+          <p class="feature-card__desc">Capped deposits, auditable reserves, weekly reporting. Designed for serious allocators.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================================
+       VAULT PREVIEW (Dashboard Mockup)
+       ==================================================================== -->
+  <section class="vault-preview" id="vault-preview">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Vault Preview</p>
+        <h2 class="section-title">Your gold yield dashboard</h2>
+      </div>
+
+      <div class="dashboard-card">
+        <!-- Header row -->
+        <div class="dashboard-card__header">
+          <div class="dashboard-card__title-group">
+            <div class="dashboard-card__au"><span>vGLD</span></div>
+            <div>
+              <h3 class="dashboard-card__name">Gold Yield Vault</h3>
+              <p class="dashboard-card__flow">USDCx → PAXG → stSTX yield</p>
+            </div>
+          </div>
+          <span class="badge badge--green">
+            <span style="display:inline-block;width:0.375rem;height:0.375rem;border-radius:50%;background:#4ADE80;margin-right:0.375rem;"></span>
+            Live on Mainnet
+          </span>
+        </div>
+
+        <!-- Stats row -->
+        <div class="dashboard-card__stats">
+          <div>
+            <p class="dashboard-stat__label">Your Deposit</p>
+            <p class="dashboard-stat__value">—</p>
+            <p class="dashboard-stat__sub">USDCx</p>
+          </div>
+          <div>
+            <p class="dashboard-stat__label">vGLD Balance</p>
+            <p class="dashboard-stat__value">—</p>
+            <p class="dashboard-stat__sub">receipt tokens</p>
+          </div>
+          <div>
+            <p class="dashboard-stat__label">Yield Earned</p>
+            <p class="dashboard-stat__value dashboard-stat__value--gold">—</p>
+            <p class="dashboard-stat__sub">paid weekly</p>
+          </div>
+          <div>
+            <p class="dashboard-stat__label">Vault PAXG Reserve</p>
+            <p class="dashboard-stat__value">0.00 oz</p>
+            <p class="dashboard-stat__sub">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Verify on-chain
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Actions row -->
+        <div class="dashboard-card__actions">
+          <a href="#" class="btn-primary btn-md">
+            Deposit USDCx
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#" class="btn-outline btn-md">
+            Redeem vGLD
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================================
+       CTA SECTION
+       ==================================================================== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-section__inner">
+        <h2 class="cta-section__title">Start earning gold yield on Bitcoin</h2>
+        <p class="cta-section__desc">
+          Connect your Xverse wallet and deposit USDCx into the first commodity yield vault on Stacks.
+        </p>
+        <div class="cta-section__buttons">
+          <a href="#" class="btn-primary">
+            Launch App
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="./assets/voltfi-logo.jpg" alt="VoltFi" class="footer__logo">
+        <span class="footer__name">VoltFi</span>
+        <span class="footer__tagline">Gold Yield on Stacks</span>
+      </div>
+      <div class="footer__links">
+        <a href="https://x.com/VoltFiLabs" target="_blank" rel="noopener noreferrer" class="footer__link">
+          <!-- X (Twitter) icon -->
+          <img src="data:image/svg+xml,%3csvg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3eX%3c/title%3e%3cpath d='M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z'/%3e%3c/svg%3e" alt="X">
+          @VoltFiLabs
+        </a>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="./main.js"></script>
+</body>
+</html>
