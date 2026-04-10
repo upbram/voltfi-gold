@@ -1,6 +1,8 @@
 {
   "sip": 16,
   "name": "VoltFi Gold",
-  "description": "Gold-backed receipt token for VoltFi vault deposits on Stacks. Deposit USDCx or STX into the vault, receive vGLD representing your share of the gold-backed reserve.",
-  "image": "https://voltfi.xyz/voltfi-logo-192.png"
+  "symbol": "vGLD",
+  "decimals": 6,
+  "description": "Gold-backed receipt token...",
+  "image": "https://voltfi.xyz/assets/voltfi-logo.png"
 }
