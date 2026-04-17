@@ -1,0 +1,8 @@
+{
+  "sip": 16,
+  "name": "VoltFi PAXG",
+  "symbol": "vPAXG",
+  "decimals": 6,
+  "description": "Pure gold exposure token on Stacks. 1 vPAXG = 1 PAXG. Deposit USDCx or STX, receive vPAXG backed 1:1 by Paxos Gold.",
+  "image": "https://voltfi.xyz/assets/voltfi-logo.png"
+}
