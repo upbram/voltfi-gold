@@ -1,0 +1,8 @@
+{
+  "sip": 16,
+  "name": "VoltFi Gold Carry Vault",
+  "symbol": "vGLD",
+  "decimals": 8,
+  "description": "Gold carry vault share token on Stacks. vGLD represents a pro-rata share of a hedged gold portfolio earning yield from futures basis and idle USDC APY.",
+  "image": "https://voltfi.xyz/assets/voltfi-logo.png"
+}
