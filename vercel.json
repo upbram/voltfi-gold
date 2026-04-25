@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/info/:path*",
+      "has": [{ "type": "host", "value": "info.voltfi.xyz" }]
+    }
+  ]
+}
